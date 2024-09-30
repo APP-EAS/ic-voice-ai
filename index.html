@@ -21,7 +21,7 @@
     </style>
 </head>
 <body class="font-sans text-gray-900 leading-normal tracking-normal bg-gray-100">
-    <div class="min-h-screen flex flex-col justify-center" x-data="{ 
+    <div x-data="{ 
         plan: new URLSearchParams(window.location.search).get('plan') || 'basic',
         choice: '',
         getBasePlanPrice() {
@@ -29,8 +29,25 @@
         },
         getTotalPrice() {
             return this.choice === 'voice' ? 997 : this.getBasePlanPrice();
+        },
+        completeOrder() {
+            const totalPrice = this.getTotalPrice();
+            let redirectUrl;
+
+            if (totalPrice === 297) {
+                redirectUrl = 'https://facebook.com';
+            } else if (totalPrice === 497) {
+                redirectUrl = 'https://google.com';
+            } else if (totalPrice === 997) {
+                redirectUrl = 'https://yahoo.com';
+            } else {
+                console.error('Unexpected total price:', totalPrice);
+                return;
+            }
+
+            window.location.href = redirectUrl;
         }
-    }">
+    }" class="min-h-screen flex flex-col justify-center">
         <div class="max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:px-8 w-full">
             <div class="bg-white rounded-lg shadow-xl overflow-hidden">
                 <div class="gradient-bg text-white p-8 text-center">
@@ -65,7 +82,7 @@
 
                     <div class="text-center">
                         <p class="mb-4 text-2xl font-bold text-indigo-800">Total: $<span x-text="getTotalPrice()"></span><span class="text-lg font-normal text-gray-600">/month</span></p>
-                        <button @click="completeOrder" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 inline-block text-lg shadow-lg" x-bind:class="{ 'opacity-50 cursor-not-allowed': !choice, 'animate-pulse': choice }">
+                        <button @click="completeOrder()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 inline-block text-lg shadow-lg" :class="{ 'opacity-50 cursor-not-allowed': !choice, 'animate-pulse': choice }">
                             Complete My Order
                         </button>
                     </div>
@@ -74,25 +91,5 @@
             <p class="text-center text-gray-600 text-sm mt-4">Note: SMS & AI usage costs not included.</p>
         </div>
     </div>
-
-    <script>
-        function completeOrder() {
-            const totalPrice = this.getTotalPrice();
-            let redirectUrl;
-
-            if (totalPrice === 297) {
-                redirectUrl = 'https://facebook.com';
-            } else if (totalPrice === 497) {
-                redirectUrl = 'https://google.com';
-            } else if (totalPrice === 997) {
-                redirectUrl = 'https://youtube.com';
-            } else {
-                console.error('Unexpected total price:', totalPrice);
-                return;
-            }
-
-            window.location.href = redirectUrl;
-        }
-    </script>
 </body>
 </html>
