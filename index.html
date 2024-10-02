@@ -56,6 +56,27 @@
                 const annualPrice = this.plan === 'ai' ? 4467 : 2667;
                 return (monthlyPrice * 12) - annualPrice;
             }
+        },
+        completeOrder() {
+            const totalPrice = this.getTotalPrice();
+            let checkoutUrl;
+            if (totalPrice === 297) {
+                checkoutUrl = 'https://buy.stripe.com/7sIcMT3Q1aYNfUQ145';
+            } else if (totalPrice === 497) {
+                checkoutUrl = 'https://buy.stripe.com/00g28f3Q10k9fUQ147';
+            } else if (totalPrice === 997) {
+                checkoutUrl = 'https://buy.stripe.com/7sIcMT4U51od7ok28d';
+            } else if (totalPrice === 2667) {
+                checkoutUrl = 'https://buy.stripe.com/aEU7szgCN7MB7okfZ0';
+            } else if (totalPrice === 4467) {
+                checkoutUrl = 'https://buy.stripe.com/8wMcMT0DP8QF4c83cg';
+            } else if (totalPrice === 8967) {
+                checkoutUrl = 'https://buy.stripe.com/fZedQX72d6Ix6kg6ou';
+            } else {
+                alert('An error occurred. Please try again.');
+                return;
+            }
+            window.location.href = checkoutUrl;
         }
     }">
         <div class="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8 w-full">
@@ -125,7 +146,7 @@
 
                     <div class="text-center">
                         <p class="mb-4 text-2xl font-bold text-indigo-800">Total: $<span x-text="getTotalPrice()"></span><span class="text-lg font-normal text-gray-600" x-text="billingCycle === 'monthly' ? '/mo' : '/yr'"></span></p>
-                        <button @click="completeOrder" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 inline-block text-lg shadow-lg animate-pulse">
+                        <button @click="completeOrder()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 inline-block text-lg shadow-lg animate-pulse">
                             <span x-text="choice === 'voice' ? 'Activate Your AI Sales Team Now' : 'Activate InstantConnect Now'"></span>
                         </button>
                         <p class="mt-4 text-sm text-gray-600">Limited Time Offer: Start Closing More Deals Today!</p>
@@ -135,33 +156,5 @@
             <p class="text-center text-sm text-gray-500 mt-4">Note: SMS & AI usage costs not included</p>
         </div>
     </div>
-
-    <script>
-        function completeOrder() {
-            const choice = this.choice;
-            const billingCycle = this.billingCycle;
-            const totalPrice = this.getTotalPrice();
-
-            let checkoutUrl;
-            if (totalPrice === 297) {
-                checkoutUrl = 'https://buy.stripe.com/7sIcMT3Q1aYNfUQ145';
-            } else if (totalPrice === 497) {
-                checkoutUrl = 'https://buy.stripe.com/00g28f3Q10k9fUQ147';
-            } else if (totalPrice === 997) {
-                checkoutUrl = 'https://buy.stripe.com/7sIcMT4U51od7ok28d';
-            } else if (totalPrice === 2667) {
-                checkoutUrl = 'https://buy.stripe.com/aEU7szgCN7MB7okfZ0';
-            } else if (totalPrice === 4467) {
-                checkoutUrl = 'https://buy.stripe.com/8wMcMT0DP8QF4c83cg';
-            } else if (totalPrice === 8967) {
-                checkoutUrl = 'https://buy.stripe.com/fZedQX72d6Ix6kg6ou';
-            } else {
-                alert('An error occurred. Please try again.');
-                return;
-            }
-
-            window.location.href = checkoutUrl;
-        }
-    </script>
 </body>
 </html>
