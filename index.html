@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstantConnect Voice | AI-Powered Call Handling Revolution</title>
+    <title>InstantConnect Voice | Revolutionary AI Voice Technology</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" defer></script>
     <style>
@@ -82,20 +82,20 @@
         <div class="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8 w-full">
             <div class="bg-white rounded-lg shadow-xl overflow-hidden">
                 <div class="gradient-bg text-white p-8 text-center">
-                    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Transform Missed Calls into Revenue</h1>
-                    <p class="text-xl">InstantConnect: Your AI-Powered 24/7 Lead Conversion Solution</p>
+                    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Revolutionary AI Voice Technology: Your 24/7 Sales Team</h1>
+                    <p class="text-xl">InstantConnect Voice: Supercharge Your Lead Conversion with AI-Powered Calls</p>
                 </div>
                 <div class="p-4 sm:p-8">
                     <div class="mb-8 text-center bg-indigo-100 p-4 sm:p-6 rounded-lg">
                         <h2 class="text-2xl font-bold mb-4">Experience the Future of Customer Engagement</h2>
                         <p class="mb-4">Call our demo number to hear InstantConnect Voice in action:</p>
-                        <a href="tel:+14159188021" class="text-2xl sm:text-3xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">+60 (154) 600 0955</a>
+                        <a href="tel:+60154600955" class="text-2xl sm:text-3xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">+1 (415) 687 2892</a>
                     </div>
 
                     <div class="flex justify-center mb-4">
                         <div class="bg-gray-200 rounded-full p-1">
                             <button @click="billingCycle = 'monthly'" class="switch-tab px-4 py-2 rounded-full text-sm sm:text-base" :class="{ 'active': billingCycle === 'monthly' }">Monthly</button>
-                            <button @click="billingCycle = 'annual'" class="switch-tab px-4 py-2 rounded-full text-sm sm:text-base" :class="{ 'active': billingCycle === 'annual' }">Annual (Get 3 Months FREE!)</button>
+                            <button @click="billingCycle = 'annual'" class="switch-tab px-4 py-2 rounded-full text-sm sm:text-base" :class="{ 'active': billingCycle === 'annual' }">Annual (3 Months FREE)</button>
                         </div>
                     </div>
                     <p class="text-sm text-center mt-2 mb-8 text-indigo-600 font-semibold">Limited Time Offer: Lock in current prices with our annual plan!</p>
@@ -107,7 +107,7 @@
                             <div x-show="billingCycle === 'annual'" class="annual-savings text-center p-2 rounded-lg mb-4">
                                 <p class="font-semibold text-white">Save $<span x-text="getAnnualSavings('current')"></span> per year!</p>
                             </div>
-                            <p class="mb-4 text-indigo-600 font-semibold" x-text="plan === 'ai' ? 'Advanced AI-powered SMS conversations for higher engagement and conversion rates' : 'Reliable SMS-based lead capture within 2-3 minutes of a missed call'"></p>
+                            <p class="mb-4 text-indigo-600 font-semibold" x-text="plan === 'ai' ? 'Advanced AI-powered SMS conversations for higher engagement and conversion rates' : 'Reliable SMS-based lead capture for businesses looking to never miss an opportunity'"></p>
                             <ul class="space-y-2 mb-6">
                                 <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Prompt SMS response to missed calls</li>
                                 <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>24/7 lead capture</li>
@@ -116,7 +116,10 @@
                                     <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>AI-powered SMS conversations</li>
                                 </template>
                                 <template x-if="plan === 'ai'">
-                                    <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Intelligent lead qualification process</li>
+                                    <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Intelligent lead qualification</li>
+                                </template>
+                                <template x-if="plan === 'ai'">
+                                    <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Automated appointment scheduling</li>
                                 </template>
                             </ul>
                             <p class="font-semibold text-indigo-600" x-text="plan === 'ai' ? 'Continue with AI-powered SMS conversations' : 'Continue with Basic Plan'"></p>
@@ -131,10 +134,10 @@
                             <p class="mb-4 text-indigo-600 font-semibold">Supercharge lead conversion with AI-powered voice calls for personalized interactions that drive superior results.</p>
                             <ul class="space-y-2 mb-6">
                                 <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong class="text-indigo-800">24/7 AI call answering with human-like conversations</strong></li>
-                                <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong class="text-indigo-800">Advanced lead qualification and scoring</strong></li>
                                 <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong class="text-indigo-800">Intelligent call routing to maximize team efficiency</strong></li>
-                                <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong class="text-indigo-800">Real-time appointment scheduling</strong></li>
-                                <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong class="text-indigo-800">Comprehensive analytics to optimize your sales process</strong></li>
+                                <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Advanced lead qualification and scoring</li>
+                                <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Real-time appointment scheduling</li>
+                                <li class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Comprehensive analytics to optimize your sales process</li>
                             </ul>
                             <p class="font-semibold text-green-600">Upgrade to AI-powered voice conversations</p>
                         </div>
@@ -151,5 +154,121 @@
             <p class="text-center text-sm text-gray-500 mt-4">Note: Custom setup and usage fees may apply. Contact us for details.</p>
         </div>
     </div>
+
+    <section class="bg-gray-100 py-20" id="voice-features">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center">Unique Features of InstantConnect Voice</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Natural Language Processing</h3>
+                    <p>Our AI understands and responds to caller queries using advanced natural language processing, providing human-like interactions.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Sentiment Analysis</h3>
+                    <p>InstantConnect Voice can detect caller emotions and adapt its responses accordingly, ensuring a personalized and empathetic interaction.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Multi-lingual Support</h3>
+                    <p>Our AI can communicate in multiple languages, expanding your ability to serve a diverse customer base.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Custom Voice Integration</h3>
+                    <p>Tailor the AI's voice & personality to match your brand, creating a consistent & professional experience for your callers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20" id="use-cases">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center">Potential Use Cases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-indigo-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Home Services</h3>
+                    <p>Schedule appointments for plumbers, HVAC, electricians, and other home service professionals 24/7.</p>
+                </div>
+                <div class="bg-indigo-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Real Estate</h3>
+                    <p>Qualify potential buyers and schedule property viewings automatically, even outside office hours.</p>
+                </div>
+                <div class="bg-indigo-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Healthcare</h3>
+                    <p>Manage appointment bookings and provide basic health information to patients round the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-20" id="roi-calculator">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center">Calculate Your Potential ROI</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                <p class="mb-4">See how much additional revenue you could generate with InstantConnect Voice:</p>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="missed-calls">
+                        Estimated Missed Calls per Week:
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="missed-calls" type="number" placeholder="#">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="avg-deal-value">
+                        Average Deal Value:
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="avg-deal-value" type="number" placeholder="$">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="close-rate">
+                        Current Close Rate (%):
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="close-rate" type="number" placeholder="%">
+                </div>
+                <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="calculateROI()">
+                    See Your Potential Growth
+                </button>
+                <div id="roi-results" class="mt-4 hidden">
+                    <h3 class="font-bold text-lg mb-2">Your Potential Growth:</h3>
+                    <p>Additional Monthly Revenue: <span id="additional-revenue"></span></p>
+                    <p>Potential Annual Revenue Increase: <span id="annual-increase"></span></p>
+                    <p>Return on Investment: <span id="roi-percentage"></span>%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-indigo-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="w-full md:w-1/2 text-center md:text-left mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">InstantConnect Voice</h3>
+                    <p class="text-sm mb-1">Revolutionizing lead conversion with AI-powered voice technology.</p>
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-right mb-4 md:mb-0">
+                    <p class="text-lg font-bold mb-2">Product of Elite AI Solutions</p>
+                    <p class="text-sm mb-1">&copy; 2024 InstantConnect. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculateROI() {
+            const missedCalls = parseFloat(document.getElementById('missed-calls').value);
+            const avgDealValue = parseFloat(document.getElementById('avg-deal-value').value);
+            const closeRate = parseFloat(document.getElementById('close-rate').value) / 100;
+
+            if (isNaN(missedCalls) || isNaN(avgDealValue) || isNaN(closeRate)) {
+                alert('Please enter valid numbers for all fields.');
+                return;
+            }
+
+            const potentialMonthlyRevenue = missedCalls * 4 * avgDealValue * closeRate * 2; // Assuming 4 weeks in a month and 100% improvement
+            const potentialAnnualRevenue = potentialMonthlyRevenue * 12;
+            const roi = ((potentialAnnualRevenue - (997 * 12)) / (997 * 12) * 100).toFixed(2);
+
+            document.getElementById('additional-revenue').textContent = '$' + potentialMonthlyRevenue.toFixed(2);
+            document.getElementById('annual-increase').textContent = '$' + potentialAnnualRevenue.toFixed(2);
+            document.getElementById('roi-percentage').textContent = roi;
+            document.getElementById('roi-results').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
